@@ -1,0 +1,177 @@
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: var(--sans);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.language-selector {
+  margin-bottom: 20px;
+}
+
+.language-selector button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid var(--accent-border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.language-selector button:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+}
+
+.timer {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: var(--border);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.timer-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, #ff6b6b 100%);
+  transition: width 1s linear;
+  border-radius: 15px;
+  animation: pulse 1s infinite;
+}
+
+.timer span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-h);
+  font-weight: bold;
+  font-size: 14px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.question {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--text-h);
+  animation: slideIn 0.5s ease-out;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.option-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid var(--accent-border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: slideIn 0.5s ease-out;
+}
+
+.option-btn:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.start-btn, .reset-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: bounceIn 0.6s ease-out;
+}
+
+.start-btn:hover, .reset-btn:hover {
+  background: var(--accent-border);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.results {
+  margin-top: 20px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.results h2 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s ease-out 0.2s both;
+}
+
+.results h3 {
+  color: var(--text-h);
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease-out 0.4s both;
+}
+
+.results p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  animation: fadeIn 0.5s ease-out 0.6s both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
