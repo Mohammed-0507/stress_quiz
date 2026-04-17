@@ -146,6 +146,8 @@ h3 {
   min-height: 48px;
   min-width: 140px;
   font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .start-btn:active, .reset-btn:active {
@@ -242,21 +244,25 @@ h3 {
 
   h1 {
     font-size: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    margin-top: 8px;
   }
 
   h2 {
     font-size: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    margin-top: 10px;
   }
 
   h3 {
     font-size: 18px;
+    margin-bottom: 12px;
   }
 
   p {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.7;
+    margin-bottom: 12px;
   }
 
   .language-selector {
@@ -303,6 +309,8 @@ h3 {
     font-size: 15px;
     min-height: 44px;
     min-width: 120px;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
 
   .results {
@@ -347,11 +355,14 @@ h3 {
 
   .question {
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    margin-top: 14px;
   }
 
   .options {
     gap: 11px;
+    margin-bottom: 18px;
   }
 
   .option-btn {
@@ -364,6 +375,8 @@ h3 {
     padding: 13px 26px;
     font-size: 16px;
     min-height: 46px;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
 }
 
