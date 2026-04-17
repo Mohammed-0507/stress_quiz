@@ -1,25 +1,38 @@
 .quiz-container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   font-family: var(--sans);
   animation: fadeIn 0.5s ease-in;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .language-selector {
   margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
 }
 
 .language-selector button {
-  margin: 0 5px;
-  padding: 8px 12px;
+  padding: 8px 16px;
   border: 1px solid var(--accent-border);
   background: var(--bg);
   color: var(--text);
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s;
+  font-size: 14px;
+  min-width: 80px;
+  flex: 1;
+  min-height: 44px;
 }
 
 .language-selector button:hover {
@@ -55,25 +68,45 @@
   font-weight: bold;
   font-size: 14px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+}
+
+h3 {
+  font-size: 20px;
+  word-wrap: break-word;
 }
 
 .question {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 20px;
+  margin-top: 15px;
   color: var(--text-h);
   animation: slideIn 0.5s ease-out;
+  line-height: 1.4;
 }
 
 .options {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
 .option-btn {
-  padding: 12px 20px;
-  font-size: 16px;
+  padding: 14px 16px;
+  font-size: 15px;
   border: 2px solid var(--accent-border);
   background: var(--bg);
   color: var(--text);
@@ -81,6 +114,16 @@
   cursor: pointer;
   transition: all 0.3s;
   animation: slideIn 0.5s ease-out;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  -webkit-touch-callout: none;
+}
+
+.option-btn:active {
+  transform: scale(0.98);
 }
 
 .option-btn:hover {
@@ -91,8 +134,8 @@
 }
 
 .start-btn, .reset-btn {
-  padding: 15px 30px;
-  font-size: 18px;
+  padding: 14px 28px;
+  font-size: 16px;
   background: var(--accent);
   color: white;
   border: none;
@@ -100,6 +143,13 @@
   cursor: pointer;
   transition: all 0.3s;
   animation: bounceIn 0.6s ease-out;
+  min-height: 48px;
+  min-width: 140px;
+  font-weight: 600;
+}
+
+.start-btn:active, .reset-btn:active {
+  transform: scale(0.98);
 }
 
 .start-btn:hover, .reset-btn:hover {
@@ -111,25 +161,32 @@
 .results {
   margin-top: 20px;
   animation: slideIn 0.5s ease-out;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .results h2 {
   color: var(--accent);
   margin-bottom: 10px;
   animation: fadeIn 0.5s ease-out 0.2s both;
+  font-size: 24px;
+  word-wrap: break-word;
 }
 
 .results h3 {
   color: var(--text-h);
   margin-bottom: 15px;
   animation: fadeIn 0.5s ease-out 0.4s both;
+  font-size: 20px;
+  word-wrap: break-word;
 }
 
 .results p {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.6;
   color: var(--text);
   animation: fadeIn 0.5s ease-out 0.6s both;
+  word-wrap: break-word;
 }
 
 @keyframes fadeIn {
@@ -174,4 +231,214 @@
 
 .fade-in {
   animation: fadeIn 0.5s ease-in;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 12px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .language-selector {
+    margin-bottom: 15px;
+    gap: 6px;
+  }
+
+  .language-selector button {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-width: 65px;
+    min-height: 40px;
+  }
+
+  .timer {
+    height: 28px;
+    margin-bottom: 15px;
+  }
+
+  .timer span {
+    font-size: 12px;
+  }
+
+  .question {
+    font-size: 15px;
+    margin-bottom: 15px;
+    margin-top: 12px;
+    line-height: 1.4;
+  }
+
+  .options {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .option-btn {
+    padding: 12px 14px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .start-btn, .reset-btn {
+    padding: 12px 24px;
+    font-size: 15px;
+    min-height: 44px;
+    min-width: 120px;
+  }
+
+  .results {
+    padding: 12px;
+  }
+
+  .results h2 {
+    font-size: 22px;
+  }
+
+  .results h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .results p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .quiz-container {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 14px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  .language-selector button {
+    padding: 8px 14px;
+    font-size: 13px;
+    min-height: 42px;
+  }
+
+  .question {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .options {
+    gap: 11px;
+  }
+
+  .option-btn {
+    padding: 13px 15px;
+    font-size: 15px;
+    min-height: 46px;
+  }
+
+  .start-btn, .reset-btn {
+    padding: 13px 26px;
+    font-size: 16px;
+    min-height: 46px;
+  }
+}
+
+/* Desktop Optimizations */
+@media (min-width: 769px) {
+  .quiz-container {
+    padding: 30px;
+  }
+
+  .language-selector button {
+    flex: 0 1 auto;
+    min-width: auto;
+  }
+
+  .option-btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .start-btn:hover, .reset-btn:hover {
+    transform: scale(1.08);
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+  .quiz-container {
+    max-width: 700px;
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .question {
+    font-size: 18px;
+  }
+
+  .results p {
+    font-size: 16px;
+  }
+}
+
+/* Landscape Mobile Adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+  .quiz-container {
+    min-height: auto;
+    padding: 10px;
+  }
+
+  h1, h2 {
+    margin-bottom: 8px;
+  }
+
+  .timer {
+    margin-bottom: 10px;
+  }
+
+  .question {
+    margin-bottom: 10px;
+    margin-top: 8px;
+  }
+
+  .options {
+    margin-bottom: 10px;
+    gap: 8px;
+  }
+
+  .option-btn {
+    padding: 10px 12px;
+    font-size: 14px;
+    min-height: 40px;
+  }
 }
